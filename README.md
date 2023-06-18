@@ -2,6 +2,8 @@
 
 This API provides the salary range for a specific job title, with optional filters for company location, experience level, and employment type. The salary range is returned as a sorted list under the 'salary_range' key. If a filter results in no matches, the API will return an empty list. If any of the parameters is invalid, the API will return a 400 error with an appropriate message.
 
+You can find exploratory analysis in [analysis.ipynb](https://github.com/rolandina/simplon-projet-existant/blob/main/analysis.ipynb)
+
 ![](https://github.com/rolandina/simplon-projet-existant/blob/main/images/projet_donne_api.png)
 
 ## Endpoints
@@ -39,15 +41,15 @@ curl -X GET "http://0.0.0.0:8000/salary_range_for_job/?job_title=Data%20Scientis
 pip install pandas fastapi uvicorn
 ```
 
-2. Run the server:
+2. Run the server by running the [api.py](https://github.com/rolandina/simplon-projet-existant/blob/main/api.py) file:
 
 ```bash
-uvicorn api:app --reload
+python3 api.py
 ```
 
 ## Running Unit Test
 
-For this project, I have a set of unit tests implemented in the test_salary_range_for_job.py file.
+For this project, I have a set of unit tests implemented in the [test_salary_range_for_job.py](https://github.com/rolandina/simplon-projet-existant/blob/main/test_salary_range_for_job.py) file.
 
 To run these unit tests, follow these steps:
 
